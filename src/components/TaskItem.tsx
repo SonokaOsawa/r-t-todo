@@ -1,7 +1,8 @@
 import React from 'react';
-import { Todo } from './Types'
-import {useDispatch} from 'react-redux'
-import {doneTodo, deleteTodo} from '../modules/tasksModule'
+import { Todo } from './Types';
+import {useDispatch} from 'react-redux';
+import {doneTodo, deleteTodo} from '../modules/tasksModule';
+import { Link } from "react-router-dom";
 
 interface Props {
     task: Todo
@@ -18,7 +19,7 @@ const TaskItem = ({task}: Props) => {
                 {task.done ? (
                     <del>{task.title}</del>
                 ) : (
-                    <span>{task.title}</span>
+                    <Link to={`/task_detail/${task.id}`}><span>{task.title}</span></Link>
                 )}
             </label>
             <button onClick={() => dispatch(deleteTodo(task))}>削除</button>

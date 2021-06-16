@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import {useDispatch} from 'react-redux'
-import {addTodo} from '../modules/tasksModule'
+import {useDispatch} from 'react-redux';
+import {addTodo} from '../modules/tasksModule';
 
 const AddTodo = () => {
     const dispatch = useDispatch()

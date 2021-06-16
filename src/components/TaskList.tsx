@@ -1,8 +1,7 @@
 import React from 'react';
-import TaskItem from './TaskItem'
-import { Todo } from './Types'
-import {useSelector} from 'react-redux'
-import {RootState} from '../rootReducer'
+import TaskItem from './TaskItem';
+import {useSelector} from 'react-redux';
+import {RootState} from '../rootReducer';
 
 const TaskList = () => {
     const {tasks} = useSelector((state: RootState) => state.tasks)

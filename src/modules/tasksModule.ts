@@ -19,7 +19,7 @@ const todoSlice = createSlice({
     reducers: {
         addTodo (state:State, action:PayloadAction<string>) {
             const createId = ():number => {
-                return Math.floor(Math.random() * 10)
+                return Math.floor(Math.random() * 101)
             }
             const newTodo: Todo = {
                 id: createId(),
