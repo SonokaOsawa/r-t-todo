@@ -6,12 +6,8 @@ interface State {
 }
 
 const initialState: State = {
-    tasks:[{
-      id:1,
-      title:'テスト',
-      done:false
-    }
-  ]}
+    tasks:[]
+}
 
 const todoSlice = createSlice({
     name:'tasks',
